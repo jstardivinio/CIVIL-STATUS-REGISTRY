@@ -6,32 +6,39 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Civil Status Registry</title>
-    <link href="../style/style.css" type="text/css" rel="stylesheet" />
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+    <script type="text/javascript" src="../bootstrap/js/jquery.js" ></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.js" ></script>
   </head>
   <body>
-      <h1 class="title">Civil Status Registery</h1>
-    <div class ="main">
-      <p>
-        <h1>Login</h1>
-      </p>
-      <div class="form">
-        <form class=s"login" action="login.inc.php" method="post">
-          <table>
-          <tr>
-            <td>ID</td>
-            <td><input type="text" name="id" value="" required></td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" value="" required></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="submit"><input type="submit" name="login" value="login"></td>
-          </tr>
-          </table>
-        </form>
+    <header class="sticky-top" style="height:100px; background-color: #007bff">
+      <div class="d-inline-block text-white" style="width:100%; height: 75%">
+        <h1 class="text-center ">Civil Status Registery</h1>
       </div>
+    </header>
+
+    <section>
+        <div class="mx-auto  border rounded shadow p-4 mt-4" style="width: 300px">
+            <h1>Login</h1>
+        <form  action="login.inc.php" method="post">
+          <div class="  form-group row">
+      <label>ID</label>
+      <input type="text" class="form-control " name="id" placeholder="Enter id" required>
     </div>
+
+    <div class=" form-group row ">
+      <label>Password</label>
+      <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn btn-outline-primary" name="login">Login</button>
+        </form>
+  </section>
+
+  <footer class="fixed-bottom" style="height:10%; background-color: #007bff">
+    <div >
+    </div>
+  </footer>
   </body>
 </html>
