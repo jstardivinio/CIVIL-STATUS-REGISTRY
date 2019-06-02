@@ -15,8 +15,7 @@ if (isset($_POST['login'])) {
 
   }
   else {
-    mysqli_select_db($conn,"WORKER");
-    $sql = "SELECT * FROM worker WHERE ID = '$id'";
+    $sql = "SELECT * FROM PERSONEL WHERE ID = '$id'";
     $result = mysqli_query($conn, $sql) or die("Could not get data ". mysqli_error($conn));
     $resultCheck = mysqli_num_rows($result);
     if($resultCheck < 1) {
@@ -33,9 +32,9 @@ if (isset($_POST['login'])) {
         } elseif ($hashedPwdCheck == true){
           //setting Session variables
           $_SESSION['u_id'] = $row['ID'];
-          $_SESSION['u_fname'] = $row['Fname'];
-          $_SESSION['u_lname'] = $row['Lname'];
-          $_SESSION['u_wstatus'] = $row['Wstatus'];
+          $_SESSION['u_fname'] = $row['FName'];
+          $_SESSION['u_lname'] = $row['LName'];
+          $_SESSION['u_wstatus'] = $row['WStatus'];
 
           mysqli_close($conn);
 
